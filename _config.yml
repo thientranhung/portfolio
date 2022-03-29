@@ -1,0 +1,199 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+locale: "en-US"
+title: Pulong Ma
+# email: 
+#googlescholar    : "http://yourfullgooglescholarurl.com"
+#orcid            : "http://orcid.org/yourorcidurl"
+description: >- # this means to ignore newlines until "baseurl:"
+  Pulong Ma's Homepage
+# baseurl: "" # the subpath of your site, e.g. /blog
+# url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# twitter_username: jekyllrb
+# github_username:  pulongma
+words_per_minute         : 800
+future                   : true
+output_dir: "."
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+ # - index.md
+ # - publications.md
+ # - research.md
+ # - teaching.md
+ # - presentations.md
+ # - CV.md
+
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - CHANGELOG
+  - Capfile
+  - Gemfile
+  - Gruntfile.js
+  - LICENSE
+  - README
+  - Rakefile
+  - assets/js/_main.js
+  - assets/js/plugins
+  - assets/js/vendor
+  - config
+  - gulpfile.js
+  - log
+  - node_modules
+  - package.json
+  - tmp
+  - vendor
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+
+# Build settings
+markdown: kramdown
+kramdown:
+    smart_quotes: ["apos", "apos", "quot", "quot"]
+theme: minima
+
+
+
+  
+# Collections
+collections:
+  HOME:
+    output: true
+    permalink: /:collection/:path/
+ # NEWS: 
+ #   defaults: 
+ #     layout: post
+ #   output: true
+ #   permalink: /news/:path/
+ #   news_limit: 5
+    
+  PUBLICATIONS:
+    output: true
+    permalink: /:collection/:path/
+  RESEARCH:
+    output: true
+    permalink: /:collection/:path/
+  TEACHING:
+    output: true
+    permalink: /:collection/:path/
+#  PRESENTATIONS:
+#    output: true
+#    permalink: /:collection/:path/
+  CV: 
+    output: true
+    permalink: /:collection/:path/
+
+
+# Defaults
+defaults:
+  # _news
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+   # _teaching
+  - scope:
+      path: ""
+      type: teaching
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: false
+  # _research
+  - scope:
+      path: ""
+      type: research
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+# Outputting
+permalink: /:categories/:title/
+ #paginate: 5 # amount of posts to show
+ #paginate_path: /page:num/
+timezone: America/New_York # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-relative-links
+  #- jemoji
+  
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+
+relative_links:
+  enabled:     true
+  collections: true
+  
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+header_pages:
+- index.md
+#- news.md
+- publications.md
+- research.md
+- teaching.md
+#- presentations.md
+- CV.md
+

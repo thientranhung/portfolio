@@ -1,0 +1,71 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+
+body{
+  font-family: Arial;
+  font-size: 12pt;
+  text-align: justify;
+}
+
+
+
+
+/* Headers */
+h1{
+  font-size: 16pt;
+}
+
+h2{
+  font-size: 14pt;
+}
+
+
+p{
+  font-size: 12pt;
+  text-align: justify;
+}
+
+.label {
+    border-radius: 0.5px; 
+    padding: 0.1em 2px; 
+    font-size: 10px; 
+    display: inline-block!important; 
+    vertical-align: text-top!important;
+    margin: 0 auto;
+    display: block;
+}
+
+.label_submit {
+    background-color: #fbca04;
+}
+
+.label_revision {
+    background-color: #9ad02b;
+}
+
+.label_accept {
+    background-color: #39d651;
+}
+
+.content {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 10px;
+}
+
+.bullelements{
+  font-size:2rem;
+}
+
+
+ul, ol, li, p {
+  line-height: 1.4em;
+  text-align: justify;
+}
+
+
+
